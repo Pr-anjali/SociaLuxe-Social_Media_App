@@ -1,0 +1,51 @@
+express : node.js framework and we build our application on this framework so basically our server runs on this framework
+
+mongoose : helps us to create mongoose modals so that we can create documents inside mongo db
+
+dotenv : after creating mongo db it is gonna give us some secret urls including database server name and password name so that they can be stored secretly without external access
+
+helmet : when we are making requests to server it is going to make it secure because when we make a request the request header carries some vulnerable properties inside it so helmet prevents some of them and also add some properties for extra security
+
+morgan : it is request logging middleware-whenever you make a request to server it is gonna return us which request has been made, what was the result and how long it took which we can see in our console 
+
+nodemon : whenever you create a node application and make a change inside any files we do not need to restart using npm start and nodemon refreshes anytime any change is done so it's kinda listing our files
+
+Regular Routes are the visible links you click on to navigate through different pages with content like text, images, and forms.
+
+API Routes are behind-the-scenes connections that allow different parts of the website to talk to each other and exchange data, like when a form you submit sends information to the server for processing.
+
+In the context of web development, the POST method works in a similar way. It's like sending data from your web browser (or a client application) to a web server. When you fill out a form on a website and click the "Submit" button, you are using the POST method.
+Here's how it works step by step:
+Form Submission: You enter some information in a web form, like your name, email address, and a message. When you click the "Submit" button, the data you entered is collected.
+Data in an Envelope: Just like putting the letter in an envelope, the data you entered is packaged into a special format called an HTTP request. It's like putting the information into an envelope before sending it.
+Recipient's Address (URL): The HTTP request includes the address of the web server (the recipient). It tells the server where the data should be delivered.
+Sending the Request: The HTTP request, containing the data, is sent over the internet to the web server using the POST method.
+Server Processing: When the server receives the data, it opens the "envelope" (the HTTP request), extracts the information you submitted, and processes it. For example, the server may save the data to a database or use it to perform some specific action.
+Response: After processing the data, the server sends back an HTTP response. It's like getting a reply from the recipient. The response may contain a thank-you message or any other relevant information.
+
+A 403 error is an HTTP status code that stands for "Forbidden." When a client (usually a web browser or an API client) makes a request to a server, the server may respond with a 403 error to indicate that the request was understood, but the server refuses to authorize it. In other words, the server recognizes the client's identity, but the client does not have the necessary permissions to access the requested resource.
+
+A 500 error is an HTTP status code that stands for "Internal Server Error." When a client (e.g., a web browser or an API client) sends a request to a server, the server may respond with a 500 error to indicate that an unexpected condition occurred on the server's side, preventing it from fulfilling the request. It suggests that something went wrong within the server, and the server was unable to handle the request properly. The error is generic and does not provide specific details about the cause of the problem, which can make debugging more challenging.
+
+user._doc: Assuming user is a Mongoose document, the _doc property holds the actual data object (plain JavaScript object) that represents the document in the MongoDB collection. Mongoose wraps the MongoDB document with additional properties and methods, and _doc gives you access to the plain data object without any additional metadata.
+
+{ password, updatedAt, ...other }: This is object destructuring syntax in JavaScript. It allows you to extract specific properties from an object and assign them to variables. In this case:
+
+password: It extracts the value of the password property from user._doc and assigns it to the variable password.
+updatedAt: It does the same for the updatedAt property, assigning its value to the variable updatedAt.
+...other: The three dots (...) represent the "rest" or "spread" operator. It gathers the remaining properties of user._doc (excluding password and updatedAt) and puts them into a new object called other.
+
+== (Equality Operator):
+The == operator is used for loose or abstract equality comparison.
+When comparing two values with ==, JavaScript attempts to perform type coercion, which means it tries to convert the operands to the same type before making the comparison.
+If the operands are of different types, JavaScript will try to convert one or both of them to the same type and then compare their values.
+After type coercion, the comparison is done based on the values of the operands.
+It may lead to unexpected results due to implicit type conversion.
+
+=== (Strict Equality Operator):
+The === operator is used for strict equality comparison.
+Unlike ==, the === operator does not perform type coercion.
+It compares both the values and the types of the operands.
+The comparison is only true if both the values and types of the operands are the same.
+It is considered safer and more predictable compared to ==.
+
